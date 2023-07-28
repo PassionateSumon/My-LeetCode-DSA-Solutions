@@ -19,6 +19,9 @@ int rec(int row, int col, vector<vector<int>> &tri, vector<vector<int>>& dp) {
 public:
     int minimumTotal(vector<vector<int>>& triangle) {
         int n = triangle.size();
+
+        // << ------------- Space Optimization ----------->>
+        // TC: O(n*n) ----- SC: O(n)
         vector<int> dp(n, 0);
         for(int j = 0; j < n; j++) {
             dp[j] = triangle[n-1][j];
