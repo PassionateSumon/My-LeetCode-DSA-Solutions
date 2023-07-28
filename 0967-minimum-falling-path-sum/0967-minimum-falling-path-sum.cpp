@@ -14,7 +14,7 @@ public:
                 } else if(j == 0) {
                     down = matrix[i][j] + dp[i+1][j];
                     right = matrix[i][j] + dp[i+1][j+1]; 
-                } else if(j > 0 && j < n-1) {
+                } else {
                     down = matrix[i][j] + dp[i+1][j];
                     left = matrix[i][j] + dp[i+1][j-1]; 
                     right = matrix[i][j] + dp[i+1][j+1];
