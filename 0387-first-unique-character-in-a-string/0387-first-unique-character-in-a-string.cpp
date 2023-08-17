@@ -1,7 +1,7 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        map<char, pair<int, int>> mp;
+        unordered_map<char, pair<int, int>> mp;
         for(int i = 0; i < s.size(); i++) {
             mp[s[i]] = {(mp[s[i]].first)+1, i};
         }
@@ -14,15 +14,6 @@ public:
                 ans = min(ans, it2);
             }
         }
-
-        // for(auto it: mp) {
-        //     int freq = it.second.first;
-        //     int ind = it.second.second;
-        //     cout << endl << ind << " " << " " << freq;
-        //     if(freq == 1) {
-        //         if(ind < ans) ans = ind;
-        //     }
-        // }
         return (ans == 1e9) ? -1 : ans;
     }
 };
