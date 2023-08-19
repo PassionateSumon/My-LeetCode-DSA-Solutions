@@ -6,10 +6,10 @@ public:
         for(int i = 0; i < n; ++i) {
             mp.push_back({nums[i], __builtin_popcount(nums[i])});
         }
-        if(mp.size() == 1) {
-            sort(nums.begin(), nums.end());
-            return nums;
-        }
+        // if(mp.size() == 1) {
+        //     sort(nums.begin(), nums.end());
+        //     return nums;
+        // }
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
         for(auto it: mp) {
             int num = it.first;
