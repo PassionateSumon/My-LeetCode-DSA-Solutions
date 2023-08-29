@@ -1,6 +1,7 @@
 class Solution {
 public:
     int minimumTime(vector<vector<int>>& grid) {
+        ios_base::sync_with_stdio(0), cin.tie(0), cout.tie(0);
         int n = grid.size(), m = grid[0].size();
         if(grid[0][1] > 1 && grid[1][0] > 1) return -1;
         vector<vector<bool>> vis(n, vector<bool>(m, false));
